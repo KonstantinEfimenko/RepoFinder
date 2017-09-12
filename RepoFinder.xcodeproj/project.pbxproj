@@ -7,21 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D8EC7511F67D64B005736A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8EC7501F67D64B005736A8 /* AppDelegate.swift */; };
-		1D8EC7531F67D64B005736A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8EC7521F67D64B005736A8 /* ViewController.swift */; };
-		1D8EC7561F67D64B005736A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8EC7541F67D64B005736A8 /* Main.storyboard */; };
 		1D8EC7581F67D64B005736A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8EC7571F67D64B005736A8 /* Assets.xcassets */; };
 		1D8EC75B1F67D64B005736A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8EC7591F67D64B005736A8 /* LaunchScreen.storyboard */; };
+		1D8EC7641F67D7CF005736A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8EC7631F67D7CF005736A8 /* AppDelegate.swift */; };
+		1D8EC76B1F67E100005736A8 /* ArchiveService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8EC76A1F67E100005736A8 /* ArchiveService.swift */; };
+		1D8EC76E1F67F646005736A8 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D8EC76C1F67F646005736A8 /* Search.storyboard */; };
+		1D8EC76F1F67F646005736A8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8EC76D1F67F646005736A8 /* SearchViewController.swift */; };
+		1D8EC7731F67F8C1005736A8 /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8EC7721F67F8C1005736A8 /* RestApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1D8EC74D1F67D64B005736A8 /* RepoFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D8EC7501F67D64B005736A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D8EC7521F67D64B005736A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1D8EC7551F67D64B005736A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D8EC7571F67D64B005736A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D8EC75A1F67D64B005736A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D8EC75C1F67D64B005736A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D8EC7631F67D7CF005736A8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D8EC76A1F67E100005736A8 /* ArchiveService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchiveService.swift; sourceTree = "<group>"; };
+		1D8EC76C1F67F646005736A8 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		1D8EC76D1F67F646005736A8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1D8EC7721F67F8C1005736A8 /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,80 @@
 		1D8EC74F1F67D64B005736A8 /* RepoFinder */ = {
 			isa = PBXGroup;
 			children = (
-				1D8EC7501F67D64B005736A8 /* AppDelegate.swift */,
-				1D8EC7521F67D64B005736A8 /* ViewController.swift */,
-				1D8EC7541F67D64B005736A8 /* Main.storyboard */,
+				1D8EC7651F67D7D6005736A8 /* Modules */,
+				1D8EC7621F67D72A005736A8 /* AppDelegate */,
 				1D8EC7571F67D64B005736A8 /* Assets.xcassets */,
 				1D8EC7591F67D64B005736A8 /* LaunchScreen.storyboard */,
 				1D8EC75C1F67D64B005736A8 /* Info.plist */,
 			);
 			path = RepoFinder;
+			sourceTree = "<group>";
+		};
+		1D8EC7621F67D72A005736A8 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC7631F67D7CF005736A8 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1D8EC7651F67D7D6005736A8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC7701F67F874005736A8 /* Data */,
+				1D8EC7671F67D830005736A8 /* Services */,
+				1D8EC7661F67D7F4005736A8 /* ViewControllers */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1D8EC7661F67D7F4005736A8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC7681F67D87C005736A8 /* Search */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1D8EC7671F67D830005736A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC7691F67E0AB005736A8 /* Archive */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1D8EC7681F67D87C005736A8 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC76C1F67F646005736A8 /* Search.storyboard */,
+				1D8EC76D1F67F646005736A8 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1D8EC7691F67E0AB005736A8 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC76A1F67E100005736A8 /* ArchiveService.swift */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		1D8EC7701F67F874005736A8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC7711F67F88E005736A8 /* RestApi */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		1D8EC7711F67F88E005736A8 /* RestApi */ = {
+			isa = PBXGroup;
+			children = (
+				1D8EC7721F67F8C1005736A8 /* RestApi.swift */,
+			);
+			path = RestApi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D8EC75B1F67D64B005736A8 /* LaunchScreen.storyboard in Resources */,
+				1D8EC76E1F67F646005736A8 /* Search.storyboard in Resources */,
 				1D8EC7581F67D64B005736A8 /* Assets.xcassets in Resources */,
-				1D8EC7561F67D64B005736A8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,22 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D8EC7531F67D64B005736A8 /* ViewController.swift in Sources */,
-				1D8EC7511F67D64B005736A8 /* AppDelegate.swift in Sources */,
+				1D8EC7731F67F8C1005736A8 /* RestApi.swift in Sources */,
+				1D8EC76F1F67F646005736A8 /* SearchViewController.swift in Sources */,
+				1D8EC76B1F67E100005736A8 /* ArchiveService.swift in Sources */,
+				1D8EC7641F67D7CF005736A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1D8EC7541F67D64B005736A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1D8EC7551F67D64B005736A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1D8EC7591F67D64B005736A8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -265,6 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZQ4YCF33U4;
 				INFOPLIST_FILE = RepoFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iefymenko.RepoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,6 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = ZQ4YCF33U4;
 				INFOPLIST_FILE = RepoFinder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iefymenko.RepoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
